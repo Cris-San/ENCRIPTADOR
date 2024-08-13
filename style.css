@@ -3,7 +3,9 @@
 
     --color-primario: #000000;
     --color-secundario:#f6f6f6f6;
-    --color-terciario:#22d4fd;
+    --color-terciario: rgb(255, 0, 0);
+    --color-cuarto: #0000FF;
+    --color-encriptar: #f00f27;
     --fuente-monserrat:"Montserrat", sans-serif ;
     --fuente-krona: "Krona One", sans-serif ;
 
@@ -52,24 +54,24 @@ header img:active {
 }
 
 .protege {
-    color: #FF0000;
+    color: var(--color-terciario);
     transition: 0.3S ease-in, color 0.3s ease-in;
 }
 
 .protege:hover {
-    color: #CC0000;
+    color: var(--color-terciario);
     transform: scale(1.2) rotate(-5deg);
     cursor: pointer;
 }
 
 .revela {
-    color: #0000FF;
+    color: var(--color-cuarto);
     transition: transform 0.3s ease-in, color 0.3s ease-in;
 }
 
 
 .revela:hover {
-    color:  #0000CC;
+    color:  var(--color-cuarto);
     transform: scale(1.2) rotate(5deg);
     cursor: pointer;
 }
@@ -125,14 +127,14 @@ textarea {
 }
 
 .alerta:hover {
-    color: rgb(255, 0, 0);
+    color: var(--color-terciario);
     font-size: 18px;
 }
 
 .alerta img {
     width: 16px;
     height: 16px;
-    background-color: rgb(255, 0, 0);
+    background-color: var(--color-terciario);
 }
 
 button {
@@ -152,11 +154,37 @@ button {
 }
 
 .btn_encrip:hover {
-    background-color: rgb(255, 0, 0);
+    background-color: var(--color-terciario);
     transform: scale(1.1) translateY(-5px);
 }
 
 .btn_desencrip:hover {
     background-color: rgb(0, 0, 255);
     transform: scale(1.1) translateY(-5px);
+}
+
+
+
+.mensaje_info {
+    font-family: var(--fuente-krona);
+    color: var(--color-secundario);
+}
+
+.mensaje_descrip {
+    font-family: var(--fuente-krona);
+    color: var(--color-secundario);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.encriptar{
+    color: var(--color-encriptar);
+    font-family: var(--fuente-monserrat);
+    
+}
+
+.desencriptar{
+    color: var(--color-cuarto);
+    font-family: var(--fuente-monserrat);
+
 }
