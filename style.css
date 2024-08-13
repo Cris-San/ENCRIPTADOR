@@ -14,8 +14,64 @@ header{
     padding: 10px 20px;
 }
 
+/* Estilo básico del logo */
 header img {
-    max-height: 50px; /* Ajusta este valor según el tamaño deseado */
+    width: 100px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    animation: rotate 10s infinite linear;
+}
+
+/* Efecto al pasar el cursor */
+header img:hover,
+header img:active {
+    transform: scale(1.2) translateY(-10px);
+    box-shadow: 0 0 15px #00FF00, 0 0 25px #00FF00, 0 0 35px #00FF00;
+}
+
+/* Animación de rotación */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Ajustes para dispositivos móviles */
+@media (max-width: 768px) {
+    header img {
+        width: 80px; /* Redimensiona para pantallas más pequeñas */
+    }
+    header img:hover,
+    header img:active { /* Mantén el mismo efecto en pantallas táctiles */
+        transform: scale(1.1) translateY(-5px); /* Efecto ligeramente más sutil en móviles */
+        box-shadow: 0 0 10px #00FF00, 0 0 20px #00FF00, 0 0 30px #00FF00;
+    }
+}
+
+.protege {
+    color: #FF0000;
+    transition: 0.3S ease-in, color 0.3s ease-in;
+}
+
+.protege:hover {
+    color: #CC0000;
+    transform: scale(1.2) rotate(-5deg);
+    cursor: pointer;
+}
+
+.revela {
+    color: #0000FF;
+    transition: transform 0.3s ease-in, color 0.3s ease-in;
+}
+
+
+.revela:hover {
+    color:  #0000CC;
+    transform: scale(1.2) rotate(5deg);
+    cursor: pointer;
 }
 
 body {
