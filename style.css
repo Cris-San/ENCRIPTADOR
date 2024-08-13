@@ -121,14 +121,18 @@ textarea {
     
     display: flex;
     align-items: center;
-    gap: 5px;
-    
+    gap: 10px;
+}
+
+.alerta:hover {
+    color: rgb(255, 0, 0);
+    font-size: 18px;
 }
 
 .alerta img {
     width: 16px;
     height: 16px;
-    background-color: #00FF00;
+    background-color: rgb(255, 0, 0);
 }
 
 button {
