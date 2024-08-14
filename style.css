@@ -100,7 +100,7 @@ body {
     display: flex;
     justify-content: space-around;
     padding-top: 20px;
-    gap: 5px;
+    gap: 15px;
     
 }
 
@@ -165,6 +165,10 @@ button {
 }
 
 
+.salida_datos {
+    justify-content: center;
+    align-items: center;
+}
 
 .mensaje_info {
     font-family: var(--fuente-krona);
@@ -206,3 +210,11 @@ button {
     margin: 0 10px;
 }
 
+.img_de_encriptado {
+    max-width: 40%;
+    height: auto;
+    display: block;
+    margin:0;
+    padding: 10px 5px;
+    border-radius: 20px;
+}
