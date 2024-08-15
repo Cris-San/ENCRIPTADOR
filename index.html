@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <title>Encriptador Cris-San</title>
 </head>
 <body>
@@ -22,7 +23,7 @@
                 
                 <!--Ingreso de texto a Desencriptar o Encriptar-->
                 <div class="ingreso_texto">
-                    <textarea class="txtareaingreso" name="IngresarTexto" id="ingresarTexto" placeholder="Ingresa el texto para Proteger o Revelar"></textarea>
+                    <textarea id="ingresarTexto" class="txtareaingreso" name="IngresarTexto"  placeholder="Ingresa el texto para Proteger o Revelar"></textarea>
                 </div>
                 
                 <!--Alerta-->
@@ -33,8 +34,8 @@
                 
                 <!--Botones-->
                 <div class="botones">
-                    <button class="btn_encrip">Encriptar</button>
-                    <button class="btn_desencrip">Desencriptar</button>
+                    <button id="botonEncriptar" class="btn_encrip">Encriptar</button>
+                    <button id="botonDesencriptar" class="btn_desencrip">Desencriptar</button>
                 </div>
             </section>
 
@@ -58,5 +59,7 @@
             </section>
         </div>
     </main>
-</body>
+
+    <script src="script.js"></script>
+</body> 
 </html>
