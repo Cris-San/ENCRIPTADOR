@@ -3,6 +3,7 @@ const botonEncriptar = document.querySelector(".btn_encrip");
 const txtEncriptar = document.querySelector(".txtareaingreso");
 const aviso = document.querySelector(".texto-aviso");
 const txtDesencriptar = document.querySelector(".txtareaSalida");
+const contenido = document.querySelector(".tarjeta-contenedor");
 
 //---///Boton de Encriptar Eventos///
 
@@ -53,6 +54,7 @@ botonEncriptar.addEventListener("click", e => {
         texto = texto.replace(/u/mg, "ufat");
 
         txtDesencriptar.innerHTML = texto;
+        contenido.remove();
 
 
     }    
