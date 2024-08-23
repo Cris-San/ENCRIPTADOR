@@ -6,6 +6,8 @@ const txtDesencriptar = document.querySelector(".txtareaSalida");
 const contenido = document.querySelector(".tarjeta-contenedor");
 const copiar = document.querySelector(".btn_copiar");
 const botonDesencriptar = document.querySelector(".btn_desencrip");
+const borrar = document.querySelector(".btn_borrar");
+
 
 //---///Boton de Encriptar Eventos///
 
@@ -115,4 +117,14 @@ copiar.addEventListener("click", e => {
     let copiarTexto = txtDesencriptar;
     copiarTexto.select()
     document.execCommand("copy");
+});
+
+//---///Boton de Copiar Eventos///
+borrar.addEventListener("click", e => {
+    e.preventDefault();
+
+    txtEncriptar.value = "";
+    txtDesencriptar.value = "";
+    
+    
 });
