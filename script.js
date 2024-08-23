@@ -106,3 +106,13 @@ botonDesencriptar.addEventListener("click", e => {
     }    
 
 });
+
+
+//---///Boton de Copiar Eventos///
+copiar.addEventListener("click", e => {
+    e.preventDefault();
+
+    let copiarTexto = txtDesencriptar;
+    copiarTexto.select()
+    document.execCommand("copy");
+});
