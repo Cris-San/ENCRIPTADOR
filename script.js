@@ -26,7 +26,7 @@ botonEncriptar.addEventListener("click", e => {
         aviso.style.background = "#0A387";
         aviso.style.color = "#FFF";
         aviso.style.fontWeight = "1200";
-        aviso.textContent = "El texto no debe tener acentos ni caracteres espaciales";
+        aviso.textContent = "El texto no debe tener acentos ni caracteres especiales";
         
         setTimeout(() => {
             aviso.removeAttribute("style");
@@ -43,6 +43,16 @@ botonEncriptar.addEventListener("click", e => {
             aviso.removeAttribute("style");
         }, 1500);
     }
+
+    else {
+        texto = texto.replace(/e/mg, "enter");
+        texto = texto.replace(/i/mg, "imes");
+        texto = texto.replace(/a/mg, "ai");
+        texto = texto.replace(/o/mg, "ober");
+        texto = texto.replace(/u/mg, "ufat");
+
+        
+    }    
 
     
 })
