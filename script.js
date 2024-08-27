@@ -58,8 +58,10 @@ botonEncriptar.addEventListener("click", e => {
         texto = texto.replace(/u/mg, "ufat");
 
         txtDesencriptar.innerHTML = texto;
-        contenido.remove();
+        reeplazarImagen();
     }    
+        
+    // contenido.remove();
 });
 
 //---///Boton de Desencriptar Eventos///
@@ -104,11 +106,40 @@ botonDesencriptar.addEventListener("click", e => {
         texto = texto.replace(/ober/mg, "o");
         texto = texto.replace(/ufat/mg, "u");
         txtDesencriptar.innerHTML = texto;
-        contenido.remove();
+
     }    
+    reeplazarImagen();
+// contenido.remove();
 
 });
 
+
+
+//Funcion para reemplazar la imagen 
+
+function reeplazarImagen() {
+    contenido.remove();//Elimina el contenido actual
+
+    // Crear un nuevo elemento img
+    const imagenExito = document.createElement("img");
+    imagenExito.src = "/img/conregistro.jpg";
+    imagenExito.alt = "imagen de registro exitoso";
+    imagenExito.classList.add("img_de_encriptado");
+
+    //Crear un nuevo elemento de mensaje
+    const mensajeExito = document.createElement("h2");
+    mensajeExito.textContent = "La encriptación fue Exitosa!";
+    mensajeExito.classList.add("mensaje_info");
+
+
+    // Añadir la nueva imagen al DOM en la posición del div eliminado
+    const salidaDatos = document.querySelector(".salida_datos");
+    salidaDatos.insertBefore(mensajeExito, salidaDatos.firstChild);
+    salidaDatos.insertBefore(imagenExito, salidaDatos.firstChild);
+
+
+
+}
 
 //---///Boton de Copiar Eventos///
 copiar.addEventListener("click", e => {
