@@ -136,12 +136,13 @@ copiar.addEventListener("click", e => {
     document.execCommand("copy");
 });
 
-//---///Boton de Copiar Eventos///
+//---///Boton de Borrar Eventos///
 borrar.addEventListener("click", e => {
     e.preventDefault();
 
     txtEncriptar.value = "";
     txtDesencriptar.value = "";
     
-    
+    // Recargar la página para restablecer todo
+    location.reload();
 });
