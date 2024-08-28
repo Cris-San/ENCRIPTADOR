@@ -5,7 +5,7 @@
     --color-secundario:#f6f6f6f6;
     --color-terciario: rgb(255, 0, 0);
     --color-cuarto: #0000FF;
-    --color-encriptar: #f00f27;
+    --color-encriptar: rgb(255, 0, 0);
     --fuente-monserrat:"Montserrat", sans-serif ;
     --fuente-krona: "Krona One", sans-serif ;
 
@@ -194,6 +194,20 @@ button {
     color: var(--color-encriptar);
     font-family: var(--fuente-monserrat);
     
+}
+
+span .encriptar {
+    color: var(--color-encriptar);
+    font-family: var(--fuente-monserrat);
+    font-weight: 600;
+    font-size: 18px;
+}
+
+span .desencriptar {
+    color: var(--color-cuarto);
+    font-family: var(--fuente-monserrat);
+    font-weight: 600;
+    font-size: 18px;
 }
 
 .desencriptar{
