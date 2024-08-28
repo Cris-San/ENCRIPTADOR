@@ -58,10 +58,17 @@ botonEncriptar.addEventListener("click", e => {
         texto = texto.replace(/u/mg, "ufat");
 
         txtDesencriptar.innerHTML = texto;
-        reeplazarImagen();
+        
+        //Reemplazar el contenido de tarjeta-contenedor
+        const nuevoContenido = `
+        <h2 class="mensaje_info">Mensaje encriptado correctamente</h2>
+        <p class="mensaje_descrip">Tu mensaje ha sido encriptado exitosamente.</p>
+        <img class="img_de_encriptado" src="img/conregistro.jpg" alt="Mensaje encriptado 
+        exitoso">
+        `;
+        contenido.innerHTML = nuevoContenido;
     }    
         
-    // contenido.remove();
 });
 
 //---///Boton de Desencriptar Eventos///
@@ -108,38 +115,17 @@ botonDesencriptar.addEventListener("click", e => {
         txtDesencriptar.innerHTML = texto;
 
     }    
-    reeplazarImagen();
-// contenido.remove();
+
+        const nuevoContenido = `
+        <h2 class="mensaje_info">Mensaje desencriptado correctamente </h2>
+        <p class="mensaje_descrip">Tu mensaje ha sido encriptado exitosamente.</p>
+        <img class="img_de_encriptado" src="img/conregistro.jpg" alt="Mensaje encriptado 
+        exitoso"> `;
+        contenido.innerHTML = nuevoContenido;
 
 });
 
 
-
-//Funcion para reemplazar la imagen 
-
-function reeplazarImagen() {
-    contenido.remove();//Elimina el contenido actual
-
-    // Crear un nuevo elemento img
-    const imagenExito = document.createElement("img");
-    imagenExito.src = "/img/conregistro.jpg";
-    imagenExito.alt = "imagen de registro exitoso";
-    imagenExito.classList.add("img_de_encriptado");
-
-    //Crear un nuevo elemento de mensaje
-    const mensajeExito = document.createElement("h2");
-    mensajeExito.textContent = "La encriptación fue Exitosa!";
-    mensajeExito.classList.add("mensaje_info");
-
-
-    // Añadir la nueva imagen al DOM en la posición del div eliminado
-    const salidaDatos = document.querySelector(".salida_datos");
-    salidaDatos.insertBefore(mensajeExito, salidaDatos.firstChild);
-    salidaDatos.insertBefore(imagenExito, salidaDatos.firstChild);
-
-
-
-}
 
 //---///Boton de Copiar Eventos///
 copiar.addEventListener("click", e => {
